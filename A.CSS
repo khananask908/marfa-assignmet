@@ -1,0 +1,162 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Base Styling */
+body {
+    background-color: #f4f7fc;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Input Styling */
+input[type="text"] {
+    width: 60%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input Focus Effect */
+input[type="text"]:focus {
+    border-color: #6200ea;
+    box-shadow: 0 0 8px rgba(98, 0, 234, 0.3);
+}
+
+/* Filter Dropdown Styling */
+select {
+    width: 30%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    background-color: #f8f8f8;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover and Focus Effects on Filter */
+select:hover,
+select:focus {
+    background-color: #e8e8e8;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Results List Styling */
+ul {
+    padding: 0;
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+li {
+    padding: 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+li h3 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+li p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f7fc;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode select {
+    border-color: #333;
+    background-color: #2e2e2e;
+    color: #f4f7fc;
+}
+
+body.dark-mode li {
+    background: #333;
+    color: #f4f7fc;
+}
+
+body.dark-mode li:hover {
+    background-color: #444;
+}
+
+/* Mobile-Friendly Design */
+@media (max-width: 768px) {
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
